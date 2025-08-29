@@ -2,6 +2,10 @@ import xml.etree.ElementTree as ET
 import os
 
 def escribir_xml(nombre_archivo, contenido_dict):
+<<<<<<< HEAD
+=======
+  
+>>>>>>> 155241e1a95a18d1151ada5545762801de6a6d42
     root = ET.Element("camposAgricolas")
     for campo in contenido_dict.get("campos"):
         campo_elem = ET.SubElement(root, "campo", id=campo.get("id", ""), nombre=campo.get("nombre", ""))
@@ -24,4 +28,7 @@ def escribir_xml(nombre_archivo, contenido_dict):
     ruta = os.path.join(data_dir, f"{nombre_archivo}.xml")
     tree.write(ruta, encoding="utf-8", xml_declaration=True)
     print(f"Archivo XML creado en: {ruta}")
+<<<<<<< HEAD
     print(f"Archivo XML creado en: {ruta}")
+=======
+>>>>>>> 155241e1a95a18d1151ada5545762801de6a6d42

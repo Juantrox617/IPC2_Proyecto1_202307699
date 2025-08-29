@@ -1,6 +1,7 @@
 from services.cargar_archivos import cargarXML
 from models.matriz import EstacionLista, cargar_matriz_suelo, cargar_matriz_cultivo
 from models.matrizPatrones import procesar_patrones_suelo, procesar_patrones_cultivo
+<<<<<<< HEAD
 from models.matricesReducidas import (
     reducir_matriz, mostrar_matriz_reducida, graficar_matriz_reducida,
     reducir_matriz_cultivo, mostrar_matriz_reducida_cultivo, graficar_matriz_reducida_cultivo
@@ -12,13 +13,23 @@ def menu():
     estaciones_cultivo = None
     sensores_suelo_ids = None
     sensores_cultivo_ids = None
+=======
+from models.escribir import escribir_xml
+
+def menu():
+   
+>>>>>>> 155241e1a95a18d1151ada5545762801de6a6d42
     while True:
         print("\n--- Menú Principal ---")
         print("1. Cargar archivo XML")
         print("2. Procesar archivo (matrices de suelo y cultivo)")
         print("3. Mostrar matrices de patrones")
         print("4. Graficar matrices con Graphviz")
+<<<<<<< HEAD
         print("5. Reducir y graficar matrices de suelo y cultivo")
+=======
+        print("5. Escribir archivo XML")
+>>>>>>> 155241e1a95a18d1151ada5545762801de6a6d42
         print("6. Salir")
         opcion = input("Seleccione una opción: ")
         if opcion == '1':
@@ -53,6 +64,7 @@ def menu():
                 procesar_patrones_suelo(ruta_archivo)
                 procesar_patrones_cultivo(ruta_archivo)
                 print("Gráficos generados y abiertos.")
+<<<<<<< HEAD
         elif opcion == '5':
             if not estaciones_suelo or not sensores_suelo_ids or not estaciones_cultivo or not sensores_cultivo_ids:
                 print("Primero debe procesar el archivo para tener datos.")
@@ -66,6 +78,9 @@ def menu():
                 mostrar_matriz_reducida_cultivo(matriz_reducida_cultivo, sensores_cultivo_ids)
                 graficar_matriz_reducida_cultivo(matriz_reducida_cultivo, sensores_cultivo_ids, "matriz_cultivo_reducida")
                 print("Gráficos de matrices reducidas generados en la carpeta data.")
+=======
+
+>>>>>>> 155241e1a95a18d1151ada5545762801de6a6d42
         elif opcion == '6':
             print("Saliendo...")
             break

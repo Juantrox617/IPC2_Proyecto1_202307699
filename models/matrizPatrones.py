@@ -68,11 +68,21 @@ def cargar_matriz_cultivo_sin_print(ruta_xml, estaciones_cultivo):
 
 def graficar_matriz_patron(estaciones, sensores_ids, nombre="matriz_patron"):
     dot = Digraph(comment=nombre)
+<<<<<<< HEAD
     tabla = '<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0">'
+=======
+    # Construir la tabla en HTML
+    tabla = '<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0">'
+    # Encabezado
+>>>>>>> 155241e1a95a18d1151ada5545762801de6a6d42
     tabla += '<TR><TD><B>Estación/Sensor</B></TD>'
     for id_sensor in sensores_ids:
         tabla += f'<TD><B>s{id_sensor}</B></TD>'
     tabla += '</TR>'
+<<<<<<< HEAD
+=======
+    # Filas de estaciones y valores
+>>>>>>> 155241e1a95a18d1151ada5545762801de6a6d42
     actual_est = estaciones.head
     while actual_est:
         tabla += f'<TR><TD><B>n{actual_est.id_estacion}</B></TD>'
@@ -82,7 +92,13 @@ def graficar_matriz_patron(estaciones, sensores_ids, nombre="matriz_patron"):
         tabla += '</TR>'
         actual_est = actual_est.siguiente
     tabla += '</TABLE>'
+<<<<<<< HEAD
     dot.node("matriz", f'<{tabla}>', shape="plaintext")
+=======
+    # Nodo único con la tabla
+    dot.node("matriz", f'<{tabla}>', shape="plaintext")
+    # Guardar en carpeta data
+>>>>>>> 155241e1a95a18d1151ada5545762801de6a6d42
     data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
     output_path = os.path.join(data_dir, f"{nombre}.gv")
     dot.render(output_path, view=True, format="png")
@@ -112,10 +128,13 @@ def procesar_patrones_cultivo(ruta_xml):
     sensores_ids = cargar_matriz_cultivo_sin_print(ruta_xml, estaciones_cultivo)
     matriz_patron(estaciones_cultivo, sensores_ids)
     graficar_matriz_patron(estaciones_cultivo, sensores_ids, nombre="matriz_patron_cultivo")
+<<<<<<< HEAD
 def procesar_patrones_cultivo(ruta_xml):
     estaciones_cultivo = EstacionLista()
     sensores_ids = cargar_matriz_cultivo_sin_print(ruta_xml, estaciones_cultivo)
     matriz_patron(estaciones_cultivo, sensores_ids)
     graficar_matriz_patron(estaciones_cultivo, sensores_ids, nombre="matriz_patron_cultivo")
+=======
+>>>>>>> 155241e1a95a18d1151ada5545762801de6a6d42
 
 

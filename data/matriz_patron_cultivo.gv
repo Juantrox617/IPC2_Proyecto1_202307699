@@ -1,4 +1,0 @@
-// matriz_patron_cultivo
-digraph {
-	matriz [label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0"><TR><TD><B>Estación/Sensor</B></TD><TD><B>st01</B></TD><TD><B>st02</B></TD><TD><B>st03</B></TD></TR><TR><TD><B>ne01</B></TD><TD>1</TD><TD>1</TD><TD>0</TD></TR><TR><TD><B>ne02</B></TD><TD>0</TD><TD>1</TD><TD>0</TD></TR><TR><TD><B>ne03</B></TD><TD>0</TD><TD>1</TD><TD>0</TD></TR><TR><TD><B>ne04</B></TD><TD>0</TD><TD>0</TD><TD>0</TD></TR><TR><TD><B>ne05</B></TD><TD>0</TD><TD>0</TD><TD>0</TD></TR><TR><TD><B>ne06</B></TD><TD>0</TD><TD>0</TD><TD>0</TD></TR><TR><TD><B>ne07</B></TD><TD>0</TD><TD>0</TD><TD>0</TD></TR><TR><TD><B>ne08</B></TD><TD>0</TD><TD>0</TD><TD>0</TD></TR><TR><TD><B>ne09</B></TD><TD>0</TD><TD>0</TD><TD>0</TD></TR><TR><TD><B>ne10</B></TD><TD>1</TD><TD>0</TD><TD>0</TD></TR></TABLE>> shape=plaintext]
-}

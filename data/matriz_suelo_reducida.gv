@@ -1,4 +1,0 @@
-// matriz_suelo_reducida
-digraph {
-	matriz [label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0"><TR><TD><B>Estación/Sensor</B></TD><TD><B>ss01</B></TD><TD><B>ss02</B></TD><TD><B>ss03</B></TD><TD><B>ss04</B></TD><TD><B>ss05</B></TD></TR><TR><TD><B>n_e01_e02_e03</B></TD><TD>4200</TD><TD>0</TD><TD>0</TD><TD>0</TD><TD>0</TD></TR><TR><TD><B>n_e04</B></TD><TD>900</TD><TD>1800</TD><TD>0</TD><TD>0</TD><TD>0</TD></TR><TR><TD><B>n_e05</B></TD><TD>0</TD><TD>2000</TD><TD>0</TD><TD>0</TD><TD>0</TD></TR><TR><TD><B>n_e06</B></TD><TD>0</TD><TD>1100</TD><TD>2200</TD><TD>0</TD><TD>0</TD></TR><TR><TD><B>n_e07_e08_e09</B></TD><TD>0</TD><TD>0</TD><TD>7800</TD><TD>0</TD><TD>0</TD></TR></TABLE>> shape=plaintext]
-}

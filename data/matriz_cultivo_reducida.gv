@@ -1,4 +1,0 @@
-// matriz_cultivo_reducida
-digraph {
-	matriz [label=<<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0"><TR><TD><B>Estación/Sensor</B></TD><TD><B>st01</B></TD><TD><B>st02</B></TD><TD><B>st03</B></TD></TR><TR><TD><B>n_e01</B></TD><TD>800</TD><TD>3200</TD><TD>0</TD></TR><TR><TD><B>n_e02_e03</B></TD><TD>0</TD><TD>4600</TD><TD>0</TD></TR><TR><TD><B>n_e10</B></TD><TD>3000</TD><TD>0</TD><TD>0</TD></TR></TABLE>> shape=plaintext]
-}

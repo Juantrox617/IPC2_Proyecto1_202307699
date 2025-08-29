@@ -1,5 +1,6 @@
 import os
 import xml.etree.ElementTree as ET
+from graphviz import Digraph
 
 class SensorNodo:
     def __init__(self, id_sensor, valor=0):
@@ -51,6 +52,35 @@ class SensorLista:
             if not existe:
                 self.agregar_sensor(id_sensor, 0)
 
+    def graficar(self, nombre="matriz"):
+        dot = Digraph(comment=nombre)
+        dot.attr(rankdir='LR', shape='box')
+        # Nodo cabecera
+        dot.node("Estaciones/Sensores", shape="plaintext")
+        # Nodos de sensores
+        actual = self.head
+        while actual:
+            dot.node(f"s{actual.id_sensor}", f"s{actual.id_sensor}", shape="box")
+            dot.edge("Estaciones/Sensores", f"s{actual.id_sensor}")
+            actual = actual.siguiente
+        # Nodos de estaciones y valores
+        actual_est = self.head
+        while actual_est:
+            dot.node(f"n{actual_est.id_estacion}", f"n{actual_est.id_estacion}", shape="box")
+            dot.edge("Estaciones/Sensores", f"n{actual_est.id_estacion}")
+            actual_sen = actual_est.sensores.head
+            while actual_sen:
+                valor_node = f"n{actual_est.id_estacion}_s{actual_sen.id_sensor}"
+                dot.node(valor_node, str(actual_sen.valor), shape="ellipse")
+                dot.edge(f"n{actual_est.id_estacion}", valor_node)
+                dot.edge(f"s{actual_sen.id_sensor}", valor_node)
+                actual_sen = actual_sen.siguiente
+            actual_est = actual_est.siguiente
+        # Guardar en carpeta data
+        data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
+        output_path = os.path.join(data_dir, f"{nombre}.gv")
+        dot.render(output_path, view=True, format="png")
+
 class EstacionNodo:
     def __init__(self, id_estacion):
         self.id_estacion = id_estacion
@@ -96,6 +126,32 @@ class EstacionLista:
             print()
             actual_est = actual_est.siguiente
 
+    def graficar(self, sensores_ids, nombre="matriz"):
+        dot = Digraph(comment=nombre)
+        # Construir la tabla en HTML
+        tabla = '<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0">'
+        # Encabezado
+        tabla += '<TR><TD><B>Estación/Sensor</B></TD>'
+        for id_sensor in sensores_ids:
+            tabla += f'<TD><B>s{id_sensor}</B></TD>'
+        tabla += '</TR>'
+        # Filas de estaciones y valores
+        actual_est = self.head
+        while actual_est:
+            tabla += f'<TR><TD><B>n{actual_est.id_estacion}</B></TD>'
+            for id_sensor in sensores_ids:
+                valor = actual_est.sensores.obtener_valor(id_sensor)
+                tabla += f'<TD>{valor}</TD>'
+            tabla += '</TR>'
+            actual_est = actual_est.siguiente
+        tabla += '</TABLE>'
+        # Nodo único con la tabla
+        dot.node("matriz", f'<{tabla}>', shape="plaintext")
+        # Guardar en carpeta data
+        data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
+        output_path = os.path.join(data_dir, f"{nombre}.gv")
+        dot.render(output_path, view=True, format="png")
+
 def cargar_matriz_suelo(ruta_xml, estaciones_suelo):
     tree = ET.parse(ruta_xml)
     root = tree.getroot()
@@ -130,7 +186,7 @@ def cargar_matriz_suelo(ruta_xml, estaciones_suelo):
                     valor = int(freq.text)
                     if id_estacion in estaciones_dict:
                         estaciones_dict[id_estacion].sensores.agregar_sensor(id_sensor, valor)
-    return sensores_ids
+    
 
 def cargar_matriz_cultivo(ruta_xml, estaciones_cultivo):
     tree = ET.parse(ruta_xml)
@@ -166,7 +222,7 @@ def cargar_matriz_cultivo(ruta_xml, estaciones_cultivo):
                     valor = int(freq.text)
                     if id_estacion in estaciones_dict:
                         estaciones_dict[id_estacion].sensores.agregar_sensor(id_sensor, valor)
-    return sensores_ids
+   
 
 
 

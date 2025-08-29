@@ -1,4 +1,6 @@
 from models.matriz import EstacionLista
+import os
+from graphviz import Digraph
 
 def cargar_matriz_suelo_sin_print(ruta_xml, estaciones_suelo):
     import xml.etree.ElementTree as ET
@@ -64,6 +66,32 @@ def cargar_matriz_cultivo_sin_print(ruta_xml, estaciones_cultivo):
                         estaciones_dict[id_estacion].sensores.agregar_sensor(id_sensor, valor)
     return sensores_ids
 
+def graficar_matriz_patron(estaciones, sensores_ids, nombre="matriz_patron"):
+    dot = Digraph(comment=nombre)
+    # Construir la tabla en HTML
+    tabla = '<TABLE BORDER="1" CELLBORDER="1" CELLSPACING="0">'
+    # Encabezado
+    tabla += '<TR><TD><B>Estación/Sensor</B></TD>'
+    for id_sensor in sensores_ids:
+        tabla += f'<TD><B>s{id_sensor}</B></TD>'
+    tabla += '</TR>'
+    # Filas de estaciones y valores
+    actual_est = estaciones.head
+    while actual_est:
+        tabla += f'<TR><TD><B>n{actual_est.id_estacion}</B></TD>'
+        for id_sensor in sensores_ids:
+            valor = actual_est.sensores.obtener_valor(id_sensor)
+            tabla += f'<TD>{1 if valor != 0 else 0}</TD>'
+        tabla += '</TR>'
+        actual_est = actual_est.siguiente
+    tabla += '</TABLE>'
+    # Nodo único con la tabla
+    dot.node("matriz", f'<{tabla}>', shape="plaintext")
+    # Guardar en carpeta data
+    data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
+    output_path = os.path.join(data_dir, f"{nombre}.gv")
+    dot.render(output_path, view=True, format="png")
+
 def matriz_patron(estaciones, sensores_ids):
     actual_est = estaciones.head
     print("      ", end="")
@@ -82,12 +110,12 @@ def procesar_patrones_suelo(ruta_xml):
     estaciones_suelo = EstacionLista()
     sensores_ids = cargar_matriz_suelo_sin_print(ruta_xml, estaciones_suelo)
     matriz_patron(estaciones_suelo, sensores_ids)
+    graficar_matriz_patron(estaciones_suelo, sensores_ids, nombre="matriz_patron_suelo")
 
 def procesar_patrones_cultivo(ruta_xml):
     estaciones_cultivo = EstacionLista()
     sensores_ids = cargar_matriz_cultivo_sin_print(ruta_xml, estaciones_cultivo)
     matriz_patron(estaciones_cultivo, sensores_ids)
+    graficar_matriz_patron(estaciones_cultivo, sensores_ids, nombre="matriz_patron_cultivo")
 
-# Ejemplo de uso:
-procesar_patrones_suelo('data/Entrada.xml')
-procesar_patrones_cultivo('data/Entrada.xml')
+

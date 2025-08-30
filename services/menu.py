@@ -1,6 +1,10 @@
 from services.cargar_archivos import cargarXML
 from models.matriz import EstacionLista, cargar_matriz_suelo, cargar_matriz_cultivo
-from models.matrizPatrones import procesar_patrones_suelo, procesar_patrones_cultivo
+from models.matrizPatrones import (
+    cargar_matriz_suelo_sin_print,
+    cargar_matriz_cultivo_sin_print,
+    graficar_matriz_patron
+)
 from models.matricesReducidas import (
     reducir_matriz, mostrar_matriz_reducida, graficar_matriz_reducida,
     reducir_matriz_cultivo, mostrar_matriz_reducida_cultivo, graficar_matriz_reducida_cultivo
@@ -39,20 +43,29 @@ def menu():
             if not ruta_archivo:
                 print("Primero debe cargar un archivo XML.")
             else:
-                procesar_patrones_suelo(ruta_archivo)
-                procesar_patrones_cultivo(ruta_archivo)
+                estaciones_suelo = EstacionLista()
+                sensores_suelo_head = cargar_matriz_suelo_sin_print(ruta_archivo, estaciones_suelo)
+                estaciones_cultivo = EstacionLista()
+                sensores_cultivo_head = cargar_matriz_cultivo_sin_print(ruta_archivo, estaciones_cultivo)
+                print("Matriz de patrones suelo:")
+                from models.matrizPatrones import matriz_patron
+                matriz_patron(estaciones_suelo, sensores_suelo_head)
+                print("Matriz de patrones cultivo:")
+                matriz_patron(estaciones_cultivo, sensores_cultivo_head)
         elif opcion == '4':
             if not ruta_archivo:
                 print("Primero debe cargar un archivo XML.")
             else:
-                print("Generando gráficos de matrices con Graphviz...")
+                print("Generando gráficos y archivos .dot de matrices...")
                 estaciones_suelo = EstacionLista()
                 sensores_suelo_head = cargar_matriz_suelo(ruta_archivo, estaciones_suelo)
                 estaciones_cultivo = EstacionLista()
                 sensores_cultivo_head = cargar_matriz_cultivo(ruta_archivo, estaciones_cultivo)
-                procesar_patrones_suelo(ruta_archivo)
-                procesar_patrones_cultivo(ruta_archivo)
-                print("Gráficos generados y abiertos.")
+                estaciones_suelo.graficar(sensores_suelo_head, nombre="matriz_suelo")
+                estaciones_cultivo.graficar(sensores_cultivo_head, nombre="matriz_cultivo")
+                graficar_matriz_patron(estaciones_suelo, sensores_suelo_head, nombre="matriz_patron_suelo")
+                graficar_matriz_patron(estaciones_cultivo, sensores_cultivo_head, nombre="matriz_patron_cultivo")
+                print("Archivos .dot y gráficos generados en la carpeta data.")
         elif opcion == '5':
             if not estaciones_suelo or not sensores_suelo_head or not estaciones_cultivo or not sensores_cultivo_head:
                 print("Primero debe procesar el archivo para tener datos.")

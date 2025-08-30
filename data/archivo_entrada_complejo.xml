@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<camposAgricolas>
+    <campo id="01" nombre="Campo agrícola 01">
+        <estacionesBase>
+            <estacion id="e01" nombre="Estacion 01"/>
+            <estacion id="e02" nombre="Estacion 02"/>
+            <estacion id="e03" nombre="Estacion 03"/>
+            <estacion id="e04" nombre="Estacion 04"/>
+            <estacion id="e05" nombre="Estacion 05"/>
+            <estacion id="e06" nombre="Estacion 06"/>
+            <estacion id="e07" nombre="Estacion 07"/>
+            <estacion id="e08" nombre="Estacion 08"/>
+            <estacion id="e09" nombre="Estacion 09"/>
+            <estacion id="e10" nombre="Estacion 10"/>
+            <estacion id="e11" nombre="Estacion 11"/>
+            <estacion id="e12" nombre="Estacion 12"/>
+            <estacion id="e13" nombre="Estacion 13"/>
+            <estacion id="e14" nombre="Estacion 14"/>
+            <estacion id="e15" nombre="Estacion 15"/>
+            <estacion id="e16" nombre="Estacion 16"/>
+            <estacion id="e17" nombre="Estacion 17"/>
+            <estacion id="e18" nombre="Estacion 18"/>
+            <estacion id="e19" nombre="Estacion 19"/>
+            <estacion id="e20" nombre="Estacion 20"/>
+            <estacion id="e21" nombre="Estacion 21"/>
+            <estacion id="e22" nombre="Estacion 22"/>
+            <estacion id="e23" nombre="Estacion 23"/>
+            <estacion id="e24" nombre="Estacion 24"/>
+            <estacion id="e25" nombre="Estacion 25"/>
+        </estacionesBase>
+        <sensoresSuelo>
+            <!-- GRUPO 1: e03, e07, e15, e22, e09, e18, e24 (7 estaciones) -->
+            <sensorS id="s01" nombre="Sensor S01">
+                <frecuencia idEstacion="e03">850</frecuencia>
+                <frecuencia idEstacion="e07">920</frecuencia>
+                <frecuencia idEstacion="e15">780</frecuencia>
+                <frecuencia idEstacion="e22">1100</frecuencia>
+                <frecuencia idEstacion="e09">900</frecuencia>
+                <frecuencia idEstacion="e18">630</frecuencia>
+                <frecuencia idEstacion="e24">520</frecuencia>
+            </sensorS>
+            <sensorS id="s02" nombre="Sensor S02">
+                <frecuencia idEstacion="e03">900</frecuencia>
+                <frecuencia idEstacion="e07">980</frecuencia>
+                <frecuencia idEstacion="e15">840</frecuencia>
+                <frecuencia idEstacion="e22">1180</frecuencia>
+                <frecuencia idEstacion="e09">950</frecuencia>
+                <frecuencia idEstacion="e18">700</frecuencia>
+                <frecuencia idEstacion="e24">600</frecuencia>
+            </sensorS>
+            <sensorS id="s03" nombre="Sensor S03">
+                <frecuencia idEstacion="e03">820</frecuencia>
+                <frecuencia idEstacion="e07">880</frecuencia>
+                <frecuencia idEstacion="e15">750</frecuencia>
+                <frecuencia idEstacion="e22">1050</frecuencia>
+                <frecuencia idEstacion="e09">870</frecuencia>
+                <frecuencia idEstacion="e18">650</frecuencia>
+                <frecuencia idEstacion="e24">540</frecuencia>
+            </sensorS>
+            
+            <sensorS id="s04" nombre="Sensor S04">
+                <frecuencia idEstacion="e02">1350</frecuencia>
+                <frecuencia idEstacion="e11">1420</frecuencia>
+                <frecuencia idEstacion="e19">1280</frecuencia>
+                <frecuencia idEstacion="e05">1380</frecuencia>
+                <frecuencia idEstacion="e13">1200</frecuencia>
+                <frecuencia idEstacion="e25">1190</frecuencia>
+            </sensorS>
+            <sensorS id="s05" nombre="Sensor S05">
+                <frecuencia idEstacion="e02">1280</frecuencia>
+                <frecuencia idEstacion="e11">1350</frecuencia>
+                <frecuencia idEstacion="e19">1220</frecuencia>
+                <frecuencia idEstacion="e05">1300</frecuencia>
+                <frecuencia idEstacion="e13">1150</frecuencia>
+                <frecuencia idEstacion="e25">1100</frecuencia>
+            </sensorS>
+            <sensorS id="s06" nombre="Sensor S06">
+                <frecuencia idEstacion="e02">1400</frecuencia>
+                <frecuencia idEstacion="e11">1480</frecuencia>
+                <frecuencia idEstacion="e19">1340</frecuencia>
+                <frecuencia idEstacion="e05">1450</frecuencia>
+                <frecuencia idEstacion="e13">1250</frecuencia>
+                <frecuencia idEstacion="e25">1220</frecuencia>
+            </sensorS>
+            
+            <sensorS id="s07" nombre="Sensor S07">
+                <frecuencia idEstacion="e04">980</frecuencia>
+                <frecuencia idEstacion="e12">1120</frecuencia>
+                <frecuencia idEstacion="e21">850</frecuencia>
+                <frecuencia idEstacion="e08">1000</frecuencia>
+                <frecuencia idEstacion="e16">900</frecuencia>
+                <frecuencia idEstacion="e23">950</frecuencia>
+            </sensorS>
+            <sensorS id="s08" nombre="Sensor S08">
+                <frecuencia idEstacion="e04">1050</frecuencia>
+                <frecuencia idEstacion="e12">1180</frecuencia>
+                <frecuencia idEstacion="e21">920</frecuencia>
+                <frecuencia idEstacion="e08">1080</frecuencia>
+                <frecuencia idEstacion="e16">950</frecuencia>
+                <frecuencia idEstacion="e23">1000</frecuencia>
+            </sensorS>
+          
+            <sensorS id="s09" nombre="Sensor S09">
+                <frecuencia idEstacion="e06">1650</frecuencia>
+                <frecuencia idEstacion="e14">1780</frecuencia>
+                <frecuencia idEstacion="e20">1580</frecuencia>
+                <frecuencia idEstacion="e10">1700</frecuencia>
+                <frecuencia idEstacion="e17">1600</frecuencia>
+            </sensorS>
+            <sensorS id="s10" nombre="Sensor S10">
+                <frecuencia idEstacion="e06">1720</frecuencia>
+                <frecuencia idEstacion="e14">1850</frecuencia>
+                <frecuencia idEstacion="e20">1650</frecuencia>
+                <frecuencia idEstacion="e10">1780</frecuencia>
+                <frecuencia idEstacion="e17">1680</frecuencia>
+            </sensorS>
+            
+            <sensorS id="s11" nombre="Sensor S11">
+                <frecuencia idEstacion="e01">520</frecuencia>
+                <frecuencia idEstacion="e04">590</frecuencia>
+                <frecuencia idEstacion="e12">380</frecuencia>
+            </sensorS>
+            <sensorS id="s12" nombre="Sensor S12">
+                <frecuencia idEstacion="e06">420</frecuencia>
+                <frecuencia idEstacion="e08">390</frecuencia>
+                <frecuencia idEstacion="e21">480</frecuencia>
+            </sensorS>
+            <sensorS id="s13" nombre="Sensor S13">
+                <frecuencia idEstacion="e23">650</frecuencia>
+                <frecuencia idEstacion="e16">420</frecuencia>
+                <frecuencia idEstacion="e17">380</frecuencia>
+            </sensorS>
+            <sensorS id="s14" nombre="Sensor S14">
+                <frecuencia idEstacion="e20">850</frecuencia>
+                <frecuencia idEstacion="e10">590</frecuencia>
+                <frecuencia idEstacion="e14">720</frecuencia>
+            </sensorS>
+            <sensorS id="s15" nombre="Sensor S15">
+                <frecuencia idEstacion="e18">1120</frecuencia>
+                <frecuencia idEstacion="e24">980</frecuencia>
+                <frecuencia idEstacion="e19">420</frecuencia>
+            </sensorS>
+        </sensoresSuelo>
+        <sensoresCultivo>
+            
+            <sensorT id="t01" nombre="Sensor T01">
+                <frecuencia idEstacion="e03">3200</frecuencia>
+                <frecuencia idEstacion="e07">3450</frecuencia>
+                <frecuencia idEstacion="e15">2980</frecuencia>
+                <frecuencia idEstacion="e22">3780</frecuencia>
+                <frecuencia idEstacion="e09">3300</frecuencia>
+                <frecuencia idEstacion="e18">3630</frecuencia>
+                <frecuencia idEstacion="e24">3520</frecuencia>
+            </sensorT>
+            <sensorT id="t02" nombre="Sensor T02">
+                <frecuencia idEstacion="e03">3150</frecuencia>
+                <frecuencia idEstacion="e07">3400</frecuencia>
+                <frecuencia idEstacion="e15">2920</frecuencia>
+                <frecuencia idEstacion="e22">3720</frecuencia>
+                <frecuencia idEstacion="e09">3250</frecuencia>
+                <frecuencia idEstacion="e18">3700</frecuencia>
+                <frecuencia idEstacion="e24">3600</frecuencia>
+            </sensorT>
+            <sensorT id="t03" nombre="Sensor T03">
+                <frecuencia idEstacion="e02">4850</frecuencia>
+                <frecuencia idEstacion="e11">4920</frecuencia>
+                <frecuencia idEstacion="e19">4680</frecuencia>
+                <frecuencia idEstacion="e05">4380</frecuencia>
+                <frecuencia idEstacion="e13">4200</frecuencia>
+                <frecuencia idEstacion="e25">4190</frecuencia>
+            </sensorT>
+            <sensorT id="t04" nombre="Sensor T04">
+                <frecuencia idEstacion="e02">4780</frecuencia>
+                <frecuencia idEstacion="e11">4850</frecuencia>
+                <frecuencia idEstacion="e19">4620</frecuencia>
+                <frecuencia idEstacion="e05">4300</frecuencia>
+                <frecuencia idEstacion="e13">4150</frecuencia>
+                <frecuencia idEstacion="e25">4100</frecuencia>
+            </sensorT>
+            <sensorT id="t05" nombre="Sensor T05">
+                <frecuencia idEstacion="e04">2750</frecuencia>
+                <frecuencia idEstacion="e12">2980</frecuencia>
+                <frecuencia idEstacion="e21">2450</frecuencia>
+                <frecuencia idEstacion="e08">3000</frecuencia>
+                <frecuencia idEstacion="e16">2900</frecuencia>
+                <frecuencia idEstacion="e23">2950</frecuencia>
+            </sensorT>
+            <sensorT id="t06" nombre="Sensor T06">
+                <frecuencia idEstacion="e04">2820</frecuencia>
+                <frecuencia idEstacion="e12">3050</frecuencia>
+                <frecuencia idEstacion="e21">2520</frecuencia>
+                <frecuencia idEstacion="e08">3080</frecuencia>
+                <frecuencia idEstacion="e16">2950</frecuencia>
+                <frecuencia idEstacion="e23">3000</frecuencia>
+            </sensorT>
+            <sensorT id="t07" nombre="Sensor T07">
+                <frecuencia idEstacion="e06">5200</frecuencia>
+                <frecuencia idEstacion="e14">5480</frecuencia>
+                <frecuencia idEstacion="e20">5180</frecuencia>
+                <frecuencia idEstacion="e10">5300</frecuencia>
+                <frecuencia idEstacion="e17">5200</frecuencia>
+            </sensorT>
+            <sensorT id="t08" nombre="Sensor T08">
+                <frecuencia idEstacion="e06">5300</frecuencia>
+                <frecuencia idEstacion="e14">5550</frecuencia>
+                <frecuencia idEstacion="e20">5250</frecuencia>
+                <frecuencia idEstacion="e10">5380</frecuencia>
+                <frecuencia idEstacion="e17">5280</frecuencia>
+            </sensorT>
+           
+            <sensorT id="t09" nombre="Sensor T09">
+                <frecuencia idEstacion="e01">1520</frecuencia>
+                <frecuencia idEstacion="e04">1590</frecuencia>
+                <frecuencia idEstacion="e12">1380</frecuencia>
+            </sensorT>
+            
+        </sensoresCultivo>
+    </campo>
+
+    <campo id="02" nombre="Campo agrícola 02">
+        <estacionesBase>
+            <estacion id="e01" nombre="Estacion 01"/>
+            <estacion id="e02" nombre="Estacion 02"/>
+            <estacion id="e03" nombre="Estacion 03"/>
+            <estacion id="e04" nombre="Estacion 04"/>
+            <estacion id="e05" nombre="Estacion 05"/>
+            <estacion id="e06" nombre="Estacion 06"/>
+            <estacion id="e07" nombre="Estacion 07"/>
+            <estacion id="e08" nombre="Estacion 08"/>
+            <estacion id="e09" nombre="Estacion 09"/>
+            <estacion id="e10" nombre="Estacion 10"/>
+            <estacion id="e11" nombre="Estacion 11"/>
+            <estacion id="e12" nombre="Estacion 12"/>
+            <estacion id="e13" nombre="Estacion 13"/>
+            <estacion id="e14" nombre="Estacion 14"/>
+            <estacion id="e15" nombre="Estacion 15"/>
+            <estacion id="e16" nombre="Estacion 16"/>
+            <estacion id="e17" nombre="Estacion 17"/>
+            <estacion id="e18" nombre="Estacion 18"/>
+            <estacion id="e19" nombre="Estacion 19"/>
+            <estacion id="e20" nombre="Estacion 20"/>
+            <estacion id="e21" nombre="Estacion 21"/>
+            <estacion id="e22" nombre="Estacion 22"/>
+            <estacion id="e23" nombre="Estacion 23"/>
+            <estacion id="e24" nombre="Estacion 24"/>
+            <estacion id="e25" nombre="Estacion 25"/>
+        </estacionesBase>
+        <sensoresSuelo>
+            
+            <sensorS id="s01" nombre="Sensor S01">
+                <frecuencia idEstacion="e01">1680</frecuencia>
+                <frecuencia idEstacion="e08">1750</frecuencia>
+                <frecuencia idEstacion="e14">1580</frecuencia>
+                <frecuencia idEstacion="e20">1820</frecuencia>
+                <frecuencia idEstacion="e25">1650</frecuencia>
+                <frecuencia idEstacion="e05">1720</frecuencia>
+                <frecuencia idEstacion="e17">1690</frecuencia>
+                <frecuencia idEstacion="e12">1710</frecuencia>
+                <frecuencia idEstacion="e21">1685</frecuencia>
+            </sensorS>
+            <sensorS id="s02" nombre="Sensor S02">
+                <frecuencia idEstacion="e01">1720</frecuencia>
+                <frecuencia idEstacion="e08">1800</frecuencia>
+                <frecuencia idEstacion="e14">1620</frecuencia>
+                <frecuencia idEstacion="e20">1880</frecuencia>
+                <frecuencia idEstacion="e25">1690</frecuencia>
+                <frecuencia idEstacion="e05">1780</frecuencia>
+                <frecuencia idEstacion="e17">1750</frecuencia>
+                <frecuencia idEstacion="e12">1750</frecuencia>
+                <frecuencia idEstacion="e21">1720</frecuencia>
+            </sensorS>
+            
+            <sensorS id="s03" nombre="Sensor S03">
+                <frecuencia idEstacion="e03">920</frecuencia>
+                <frecuencia idEstacion="e12">1050</frecuencia>
+                <frecuencia idEstacion="e19">780</frecuencia>
+                <frecuencia idEstacion="e23">1180</frecuencia>
+                <frecuencia idEstacion="e09">950</frecuencia>
+                <frecuencia idEstacion="e21">1120</frecuencia>
+                <frecuencia idEstacion="e06">980</frecuencia>
+                <frecuencia idEstacion="e13">1000</frecuencia>
+            </sensorS>
+            <sensorS id="s04" nombre="Sensor S04">
+                <frecuencia idEstacion="e03">850</frecuencia>
+                <frecuencia idEstacion="e12">980</frecuencia>
+                <frecuencia idEstacion="e19">720</frecuencia>
+                <frecuencia idEstacion="e23">1120</frecuencia>
+                <frecuencia idEstacion="e09">900</frecuencia>
+                <frecuencia idEstacion="e21">1050</frecuencia>
+                <frecuencia idEstacion="e06">950</frecuencia>
+                <frecuencia idEstacion="e13">950</frecuencia>
+            </sensorS>
+           
+            <sensorS id="s05" nombre="Sensor S05">
+                <frecuencia idEstacion="e02">780</frecuencia>
+                <frecuencia idEstacion="e15">850</frecuencia>
+                <frecuencia idEstacion="e24">720</frecuencia>
+                <frecuencia idEstacion="e04">800</frecuencia>
+                <frecuencia idEstacion="e10">830</frecuencia>
+                <frecuencia idEstacion="e16">810</frecuencia>
+                <frecuencia idEstacion="e18">790</frecuencia>
+                <frecuencia idEstacion="e22">820</frecuencia>
+            </sensorS>
+            <sensorS id="s06" nombre="Sensor S06">
+                <frecuencia idEstacion="e02">820</frecuencia>
+                <frecuencia idEstacion="e15">920</frecuencia>
+                <frecuencia idEstacion="e24">780</frecuencia>
+                <frecuencia idEstacion="e04">880</frecuencia>
+                <frecuencia idEstacion="e10">900</frecuencia>
+                <frecuencia idEstacion="e16">850</frecuencia>
+                <frecuencia idEstacion="e18">830</frecuencia>
+                <frecuencia idEstacion="e22">870</frecuencia>
+            </sensorS>
+            
+            <sensorS id="s07" nombre="Sensor S07">
+                <frecuencia idEstacion="e07">1420</frecuencia>
+                <frecuencia idEstacion="e09">1250</frecuencia>
+                <frecuencia idEstacion="e11">1280</frecuencia>
+                <frecuencia idEstacion="e19">420</frecuencia>
+            </sensorS>
+            <sensorS id="s08" nombre="Sensor S08">
+                <frecuencia idEstacion="e08">1320</frecuencia>
+                <frecuencia idEstacion="e25">850</frecuencia>
+                <frecuencia idEstacion="e03">590</frecuencia>
+            </sensorS>
+            <sensorS id="s09" nombre="Sensor S09">
+                <frecuencia idEstacion="e23">1180</frecuencia>
+                <frecuencia idEstacion="e11">450</frecuencia>
+                <frecuencia idEstacion="e17">680</frecuencia>
+                <frecuencia idEstacion="e05">420</frecuencia>
+            </sensorS>
+        </sensoresSuelo>
+        <sensoresCultivo>
+          
+            <sensorT id="t01" nombre="Sensor T01">
+                <frecuencia idEstacion="e01">4850</frecuencia>
+                <frecuencia idEstacion="e08">5120</frecuencia>
+                <frecuencia idEstacion="e14">4680</frecuencia>
+                <frecuencia idEstacion="e20">5350</frecuencia>
+                <frecuencia idEstacion="e25">4920</frecuencia>
+                <frecuencia idEstacion="e05">4780</frecuencia>
+                <frecuencia idEstacion="e17">4690</frecuencia>
+                <frecuencia idEstacion="e12">4710</frecuencia>
+                <frecuencia idEstacion="e21">4685</frecuencia>
+            </sensorT>
+            <sensorT id="t02" nombre="Sensor T02">
+                <frecuencia idEstacion="e01">4780</frecuencia>
+                <frecuencia idEstacion="e08">5050</frecuencia>
+                <frecuencia idEstacion="e14">4620</frecuencia>
+                <frecuencia idEstacion="e20">5280</frecuencia>
+                <frecuencia idEstacion="e25">4850</frecuencia>
+                <frecuencia idEstacion="e05">4720</frecuencia>
+                <frecuencia idEstacion="e17">4750</frecuencia>
+                <frecuencia idEstacion="e12">4750</frecuencia>
+                <frecuencia idEstacion="e21">4720</frecuencia>
+            </sensorT>
+            <sensorT id="t03" nombre="Sensor T03">
+                <frecuencia idEstacion="e03">3280</frecuencia>
+                <frecuencia idEstacion="e12">3520</frecuencia>
+                <frecuencia idEstacion="e19">2980</frecuencia>
+                <frecuencia idEstacion="e23">3850</frecuencia>
+                <frecuencia idEstacion="e09">3950</frecuencia>
+                <frecuencia idEstacion="e21">4120</frecuencia>
+                <frecuencia idEstacion="e06">3980</frecuencia>
+                <frecuencia idEstacion="e13">4000</frecuencia>
+            </sensorT>
+            <sensorT id="t04" nombre="Sensor T04">
+                <frecuencia idEstacion="e03">3350</frecuencia>
+                <frecuencia idEstacion="e12">3620</frecuencia>
+                <frecuencia idEstacion="e19">3080</frecuencia>
+                <frecuencia idEstacion="e23">3920</frecuencia>
+                <frecuencia idEstacion="e09">4050</frecuencia>
+                <frecuencia idEstacion="e21">4200</frecuencia>
+                <frecuencia idEstacion="e06">4050</frecuencia>
+                <frecuencia idEstacion="e13">4050</frecuencia>
+            </sensorT>
+            <sensorT id="t05" nombre="Sensor T05">
+                <frecuencia idEstacion="e02">2680</frecuencia>
+                <frecuencia idEstacion="e15">2850</frecuencia>
+                <frecuencia idEstacion="e24">2520</frecuencia>
+                <frecuencia idEstacion="e04">2800</frecuencia>
+                <frecuencia idEstacion="e10">2830</frecuencia>
+                <frecuencia idEstacion="e16">2810</frecuencia>
+                <frecuencia idEstacion="e18">2790</frecuencia>
+                <frecuencia idEstacion="e22">2820</frecuencia>
+            </sensorT>
+            <sensorT id="t06" nombre="Sensor T06">
+                <frecuencia idEstacion="e02">2720</frecuencia>
+                <frecuencia idEstacion="e15">2920</frecuencia>
+                <frecuencia idEstacion="e24">2580</frecuencia>
+                <frecuencia idEstacion="e04">2880</frecuencia>
+                <frecuencia idEstacion="e10">2900</frecuencia>
+                <frecuencia idEstacion="e16">2850</frecuencia>
+                <frecuencia idEstacion="e18">2830</frecuencia>
+                <frecuencia idEstacion="e22">2870</frecuencia>
+            </sensorT>
+            <!-- Sensores con estaciones NO agrupadas -->
+            <sensorT id="t07" nombre="Sensor T07">
+                <frecuencia idEstacion="e07">1420</frecuencia>
+                <frecuencia idEstacion="e09">1250</frecuencia>
+                <frecuencia idEstacion="e11">1280</frecuencia>
+                <frecuencia idEstacion="e19">420</frecuencia>
+            </sensorT>
+            <sensorT id="t08" nombre="Sensor T08">
+                <frecuencia idEstacion="e08">1320</frecuencia>
+                <frecuencia idEstacion="e25">850</frecuencia>
+                <frecuencia idEstacion="e03">590</frecuencia>
+            </sensorT>
+            <sensorT id="t09" nombre="Sensor T09">
+                <frecuencia idEstacion="e23">1180</frecuencia>
+                <frecuencia idEstacion="e11">450</frecuencia>
+                <frecuencia idEstacion="e17">680</frecuencia>
+                <frecuencia idEstacion="e05">420</frecuencia>
+            </sensorT>
+            <sensorT id="t10" nombre="Sensor T10">
+                <frecuencia idEstacion="e18">2120</frecuencia>
+                <frecuencia idEstacion="e24">1980</frecuencia>
+                <frecuencia idEstacion="e19">1420</frecuencia>
+            </sensorT>
+        </sensoresCultivo>
+    </campo>
+
+    <campo id="03" nombre="Campo agrícola 03">
+        <estacionesBase>
+            <estacion id="e01" nombre="Estacion 01"/>
+            <estacion id="e02" nombre="Estacion 02"/>
+            <estacion id="e03" nombre="Estacion 03"/>
+            <estacion id="e04" nombre="Estacion 04"/>
+            <estacion id="e05" nombre="Estacion 05"/>
+            <estacion id="e06" nombre="Estacion 06"/>
+            <estacion id="e07" nombre="Estacion 07"/>
+            <estacion id="e08" nombre="Estacion 08"/>
+            <estacion id="e09" nombre="Estacion 09"/>
+            <estacion id="e10" nombre="Estacion 10"/>
+            <estacion id="e11" nombre="Estacion 11"/>
+            <estacion id="e12" nombre="Estacion 12"/>
+            <estacion id="e13" nombre="Estacion 13"/>
+            <estacion id="e14" nombre="Estacion 14"/>
+            <estacion id="e15" nombre="Estacion 15"/>
+            <estacion id="e16" nombre="Estacion 16"/>
+            <estacion id="e17" nombre="Estacion 17"/>
+            <estacion id="e18" nombre="Estacion 18"/>
+            <estacion id="e19" nombre="Estacion 19"/>
+            <estacion id="e20" nombre="Estacion 20"/>
+            <estacion id="e21" nombre="Estacion 21"/>
+            <estacion id="e22" nombre="Estacion 22"/>
+            <estacion id="e23" nombre="Estacion 23"/>
+            <estacion id="e24" nombre="Estacion 24"/>
+            <estacion id="e25" nombre="Estacion 25"/>
+        </estacionesBase>
+        <sensoresSuelo>
+            
+            <sensorS id="s01" nombre="Sensor S01">
+                <frecuencia idEstacion="e02">1950</frecuencia>
+                <frecuencia idEstacion="e09">2120</frecuencia>
+                <frecuencia idEstacion="e16">1820</frecuencia>
+                <frecuencia idEstacion="e21">2280</frecuencia>
+                <frecuencia idEstacion="e05">2000</frecuencia>
+                <frecuencia idEstacion="e12">1850</frecuencia>
+                <frecuencia idEstacion="e18">2100</frecuencia>
+                <frecuencia idEstacion="e24">1950</frecuencia>
+            </sensorS>
+            <sensorS id="s02" nombre="Sensor S02">
+                <frecuencia idEstacion="e02">2020</frecuencia>
+                <frecuencia idEstacion="e09">2180</frecuencia>
+                <frecuencia idEstacion="e16">1880</frecuencia>
+                <frecuencia idEstacion="e21">2350</frecuencia>
+                <frecuencia idEstacion="e05">2080</frecuencia>
+                <frecuencia idEstacion="e12">1920</frecuencia>
+                <frecuencia idEstacion="e18">2180</frecuencia>
+                <frecuencia idEstacion="e24">2020</frecuencia>
+            </sensorS>
+           
+            <sensorS id="s03" nombre="Sensor S03">
+                <frecuencia idEstacion="e04">850</frecuencia>
+                <frecuencia idEstacion="e11">920</frecuencia>
+                <frecuencia idEstacion="e23">1050</frecuencia>
+                <frecuencia idEstacion="e25">680</frecuencia>
+                <frecuencia idEstacion="e01">900</frecuencia>
+                <frecuencia idEstacion="e14">950</frecuencia>
+                <frecuencia idEstacion="e08">980</frecuencia>
+            </sensorS>
+            <sensorS id="s04" nombre="Sensor S04">
+                <frecuencia idEstacion="e04">920</frecuencia>
+                <frecuencia idEstacion="e11">980</frecuencia>
+                <frecuencia idEstacion="e23">1120</frecuencia>
+                <frecuencia idEstacion="e25">750</frecuencia>
+                <frecuencia idEstacion="e01">980</frecuencia>
+                <frecuencia idEstacion="e14">1020</frecuencia>
+                <frecuencia idEstacion="e08">1050</frecuencia>
+            </sensorS>
+          
+            <sensorS id="s05" nombre="Sensor S05">
+                <frecuencia idEstacion="e06">1680</frecuencia>
+                <frecuencia idEstacion="e13">1820</frecuencia>
+                <frecuencia idEstacion="e17">1600</frecuencia>
+                <frecuencia idEstacion="e22">1700</frecuencia>
+                <frecuencia idEstacion="e03">1750</frecuencia>
+                <frecuencia idEstacion="e10">1800</frecuencia>
+            </sensorS>
+            <sensorS id="s06" nombre="Sensor S06">
+                <frecuencia idEstacion="e06">1750</frecuencia>
+                <frecuencia idEstacion="e13">1920</frecuencia>
+                <frecuencia idEstacion="e17">1680</frecuencia>
+                <frecuencia idEstacion="e22">1780</frecuencia>
+                <frecuencia idEstacion="e03">1850</frecuencia>
+                <frecuencia idEstacion="e10">1880</frecuencia>
+            </sensorS>
+            <!-- GRUPO 4: e07, e15, e19 (3 estaciones) -->
+            <sensorS id="s07" nombre="Sensor S07">
+                <frecuencia idEstacion="e07">2050</frecuencia>
+                <frecuencia idEstacion="e15">1900</frecuencia>
+                <frecuencia idEstacion="e19">1850</frecuencia>
+            </sensorS>
+            <sensorS id="s08" nombre="Sensor S08">
+                <frecuencia idEstacion="e07">2100</frecuencia>
+                <frecuencia idEstacion="e15">1950</frecuencia>
+                <frecuencia idEstacion="e19">1920</frecuencia>
+            </sensorS>
+            <!-- Sensores con estaciones NO agrupadas -->
+            <sensorS id="s09" nombre="Sensor S09">
+                <frecuencia idEstacion="e20">850</frecuencia>
+                <frecuencia idEstacion="e10">590</frecuencia>
+                <frecuencia idEstacion="e14">720</frecuencia>
+            </sensorS>
+            <sensorS id="s10" nombre="Sensor S10">
+                <frecuencia idEstacion="e18">1120</frecuencia>
+                <frecuencia idEstacion="e24">980</frecuencia>
+                <frecuencia idEstacion="e19">420</frecuencia>
+            </sensorS>
+        </sensoresSuelo>
+        <sensoresCultivo>
+           
+            <sensorT id="t01" nombre="Sensor T01">
+                <frecuencia idEstacion="e02">5850</frecuencia>
+                <frecuencia idEstacion="e09">6120</frecuencia>
+                <frecuencia idEstacion="e16">5620</frecuencia>
+                <frecuencia idEstacion="e21">6480</frecuencia>
+                <frecuencia idEstacion="e05">6000</frecuencia>
+                <frecuencia idEstacion="e12">5850</frecuencia>
+                <frecuencia idEstacion="e18">6100</frecuencia>
+                <frecuencia idEstacion="e24">5950</frecuencia>
+            </sensorT>
+            <sensorT id="t02" nombre="Sensor T02">
+                <frecuencia idEstacion="e02">5920</frecuencia>
+                <frecuencia idEstacion="e09">6180</frecuencia>
+                <frecuencia idEstacion="e16">5680</frecuencia>
+                <frecuencia idEstacion="e21">6550</frecuencia>
+                <frecuencia idEstacion="e05">6080</frecuencia>
+                <frecuencia idEstacion="e12">5920</frecuencia>
+                <frecuencia idEstacion="e18">6180</frecuencia>
+                <frecuencia idEstacion="e24">6020</frecuencia>
+            </sensorT>
+          
+            <sensorT id="t03" nombre="Sensor T03">
+                <frecuencia idEstacion="e04">3480</frecuencia>
+                <frecuencia idEstacion="e11">3650</frecuencia>
+                <frecuencia idEstacion="e23">3920</frecuencia>
+                <frecuencia idEstacion="e25">3150</frecuencia>
+                <frecuencia idEstacion="e01">3900</frecuencia>
+                <frecuencia idEstacion="e14">3950</frecuencia>
+                <frecuencia idEstacion="e08">3980</frecuencia>
+            </sensorT>
+            <sensorT id="t04" nombre="Sensor T04">
+                <frecuencia idEstacion="e04">3520</frecuencia>
+                <frecuencia idEstacion="e11">3720</frecuencia>
+                <frecuencia idEstacion="e23">4020</frecuencia>
+                <frecuencia idEstacion="e25">3220</frecuencia>
+                <frecuencia idEstacion="e01">3980</frecuencia>
+                <frecuencia idEstacion="e14">4020</frecuencia>
+                <frecuencia idEstacion="e08">4050</frecuencia>
+            </sensorT>
+           
+            <sensorT id="t05" nombre="Sensor T05">
+                <frecuencia idEstacion="e06">4850</frecuencia>
+                <frecuencia idEstacion="e13">5120</frecuencia>
+                <frecuencia idEstacion="e17">4420</frecuencia>
+                <frecuencia idEstacion="e22">4700</frecuencia>
+                <frecuencia idEstacion="e03">4750</frecuencia>
+                <frecuencia idEstacion="e10">4800</frecuencia>
+            </sensorT>
+            <sensorT id="t06" nombre="Sensor T06">
+                <frecuencia idEstacion="e06">4920</frecuencia>
+                <frecuencia idEstacion="e13">5220</frecuencia>
+                <frecuencia idEstacion="e17">4520</frecuencia>
+                <frecuencia idEstacion="e22">4800</frecuencia>
+                <frecuencia idEstacion="e03">4850</frecuencia>
+                <frecuencia idEstacion="e10">4880</frecuencia>
+            </sensorT>
+           
+            <sensorT id="t07" nombre="Sensor T07">
+                <frecuencia idEstacion="e07">6050</frecuencia>
+                <frecuencia idEstacion="e15">5900</frecuencia>
+                <frecuencia idEstacion="e19">5850</frecuencia>
+            </sensorT>
+            <sensorT id="t08" nombre="Sensor T08">
+                <frecuencia idEstacion="e07">6100</frecuencia>
+                <frecuencia idEstacion="e15">5950</frecuencia>
+                <frecuencia idEstacion="e19">5920</frecuencia>
+            </sensorT>
+           
+            <sensorT id="t09" nombre="Sensor T09">
+                <frecuencia idEstacion="e20">850</frecuencia>
+                <frecuencia idEstacion="e10">590</frecuencia>
+                <frecuencia idEstacion="e14">720</frecuencia>
+            </sensorT>
+            <sensorT id="t10" nombre="Sensor T10">
+                <frecuencia idEstacion="e18">1120</frecuencia>
+                <frecuencia idEstacion="e24">980</frecuencia>
+                <frecuencia idEstacion="e19">420</frecuencia>
+            </sensorT>
+        </sensoresCultivo>
+    </campo>
+</camposAgricolas>
+        

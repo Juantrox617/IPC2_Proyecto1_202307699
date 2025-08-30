@@ -167,8 +167,8 @@ def graficar_matriz_reducida(matriz_reducida, sensores_head, nombre):
     tabla += '</TABLE>'
     dot.node("matriz", f'<{tabla}>', shape="plaintext")
     data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
-    output_path = os.path.join(data_dir, f"{nombre}.gv")
-    dot.render(output_path, view=True, format="png")
+    output_path = os.path.join(data_dir, f"{nombre}.dot")
+    dot.render(output_path, view=False, format="png")
 
 def reducir_matriz_cultivo(estaciones, sensores_head):
     patrones_head = None
@@ -301,8 +301,8 @@ def graficar_matriz_reducida_cultivo(matriz_reducida, sensores_head, nombre):
     tabla += '</TABLE>'
     dot.node("matriz", f'<{tabla}>', shape="plaintext")
     data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
-    output_path = os.path.join(data_dir, f"{nombre}.gv")
-    dot.render(output_path, view=True, format="png")
+    output_path = os.path.join(data_dir, f"{nombre}.dot")
+    dot.render(output_path, view=False, format="png")
 
 
 

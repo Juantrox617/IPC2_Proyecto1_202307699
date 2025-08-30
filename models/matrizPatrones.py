@@ -122,7 +122,6 @@ def cargar_matriz_cultivo_sin_print(ruta_xml, estaciones_cultivo):
     return sensores_head
 
 def ordenar_sensores_enlazados(head):
-    # Ordena los nodos enlazados por id_sensor sin usar listas
     def insertar_ordenado(head, nodo):
         if head is None or nodo.id_sensor < head.id_sensor:
             nodo.siguiente = head
@@ -171,8 +170,8 @@ def graficar_matriz_patron(estaciones, sensores_head, nombre="matriz_patron"):
     tabla += '</TABLE>'
     dot.node("matriz", f'<{tabla}>', shape="plaintext")
     data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
-    output_path = os.path.join(data_dir, f"{nombre}.gv")
-    dot.render(output_path, view=True, format="png")
+    output_path = os.path.join(data_dir, f"{nombre}.dot")
+    dot.render(output_path, view=False, format="png")
 
 def matriz_patron(estaciones, sensores_head):
     actual_sensor = sensores_head

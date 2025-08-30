@@ -142,8 +142,8 @@ class EstacionLista:
         tabla += '</TABLE>'
         dot.node("matriz", f'<{tabla}>', shape="plaintext")
         data_dir = os.path.join(os.path.dirname(__file__), '..', 'data')
-        output_path = os.path.join(data_dir, f"{nombre}.gv")
-        dot.render(output_path, view=True, format="png")
+        output_path = os.path.join(data_dir, f"{nombre}.dot")
+        dot.render(output_path, view=False, format="png")
 
 def ordenar_sensores_enlazados(head):
     def insertar_ordenado(head, nodo):
